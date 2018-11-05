@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UIDocumentInteractionControllerDelegate>
 
 @end
 
@@ -17,6 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    [self.window makeKeyAndVisible];
+
+    ViewController *vc = [[ViewController alloc] initWithBlock:^(FileShareModel *model) {
+        
+    }];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+
     return YES;
 }
 
@@ -47,5 +59,57 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+    // 判断传过来的url是否为文件类型
+//    if ([url.scheme isEqualToString:@"file"]) {
+//       UIDocumentInteractionController *vc  = [UIDocumentInteractionController interactionControllerWithURL:url];
+//        vc.delegate = self;
+//        [vc presentPreviewAnimated:YES];
+//        ViewController *vc = [[ViewController alloc] initWithBlock:^(FileShareModel *model) {
+//
+//        }];
+//    }
+    return YES;
+}
+
+/*
+#pragma mark -- UIDocumentInteractionControllerDelegate
+- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller
+{
+    // 返回当前控制器
+    return [self getCurrentVC];
+}
+
+//获取当前屏幕显示的viewcontroller
+- (UIViewController *)getCurrentVC
+{
+    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+
+    UIViewController *currentVC = [self getCurrentVCFrom:rootViewController];
+
+    return currentVC;
+}
+
+- (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC
+{
+    UIViewController *currentVC;
+
+    if ([rootVC presentedViewController]) {
+        // 视图是被presented出来的
+        rootVC = [rootVC presentedViewController];
+    }
+    if ([rootVC isKindOfClass:[UITabBarController class]]) {
+        // 根视图为UITabBarController
+        currentVC = [self getCurrentVCFrom:[(UITabBarController *)rootVC selectedViewController]];
+    } else if ([rootVC isKindOfClass:[UINavigationController class]]){
+        // 根视图为UINavigationController
+        currentVC = [self getCurrentVCFrom:[(UINavigationController *)rootVC visibleViewController]];
+    } else {
+        // 根视图为非导航类
+        currentVC = rootVC;
+    }
+    return currentVC;
+}
+*/
 
 @end

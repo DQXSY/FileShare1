@@ -15,6 +15,8 @@
 		FDDC1630219025FC005C16FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDC162F219025FC005C16FF /* main.m */; };
 		FDDC163A219025FD005C16FF /* FileShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDC1639219025FD005C16FF /* FileShareTests.m */; };
 		FDDC1645219025FD005C16FF /* FileShareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDC1644219025FD005C16FF /* FileShareUITests.m */; };
+		FDDC165421902FCB005C16FF /* FileShareManage.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDC165321902FCB005C16FF /* FileShareManage.m */; };
+		FDDC1657219033D2005C16FF /* FileShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDC1656219033D2005C16FF /* FileShareModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		FDDC1640219025FD005C16FF /* FileShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDC1644219025FD005C16FF /* FileShareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileShareUITests.m; sourceTree = "<group>"; };
 		FDDC1646219025FD005C16FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDC165221902FCB005C16FF /* FileShareManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileShareManage.h; sourceTree = "<group>"; };
+		FDDC165321902FCB005C16FF /* FileShareManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileShareManage.m; sourceTree = "<group>"; };
+		FDDC1655219033D2005C16FF /* FileShareModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileShareModel.h; sourceTree = "<group>"; };
+		FDDC1656219033D2005C16FF /* FileShareModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileShareModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				FDDC1621219025FC005C16FF /* AppDelegate.m */,
 				FDDC1623219025FC005C16FF /* ViewController.h */,
 				FDDC1624219025FC005C16FF /* ViewController.m */,
+				FDDC165221902FCB005C16FF /* FileShareManage.h */,
+				FDDC165321902FCB005C16FF /* FileShareManage.m */,
+				FDDC1655219033D2005C16FF /* FileShareModel.h */,
+				FDDC1656219033D2005C16FF /* FileShareModel.m */,
 				FDDC1626219025FC005C16FF /* Main.storyboard */,
 				FDDC1629219025FC005C16FF /* Assets.xcassets */,
 				FDDC162B219025FC005C16FF /* LaunchScreen.storyboard */,
@@ -265,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDC165421902FCB005C16FF /* FileShareManage.m in Sources */,
 				FDDC1625219025FC005C16FF /* ViewController.m in Sources */,
+				FDDC1657219033D2005C16FF /* FileShareModel.m in Sources */,
 				FDDC1630219025FC005C16FF /* main.m in Sources */,
 				FDDC1622219025FC005C16FF /* AppDelegate.m in Sources */,
 			);

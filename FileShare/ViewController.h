@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FileShareManage.h"
+#import "FileShareModel.h"
+
+typedef void(^returnModelBlock)(FileShareModel *model);
 
 @interface ViewController : UIViewController
 
+- (instancetype)initWithBlock:(returnModelBlock)block;
 
 @end
 
